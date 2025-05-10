@@ -1,0 +1,16 @@
+# Fonts
+font-family = 0xProto Nerd Font
+font-family-bold = 0xProto Nerd Font Bold
+font-family-italic = 0xProto Nerd Font Italic
+
+font-size = 16
+
+# window
+window-decoration = none
+
+# background
+# background-opacity = 0.90
+# background-blur = 15
+
+# theme
+theme = carbonfox
