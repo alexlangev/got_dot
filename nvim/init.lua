@@ -3,6 +3,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- turn off swapfiles?
+vim.opt.swapfile = false
+
 -- set to true if using nerd font
 vim.g.have_nerd_font = false
 
@@ -83,6 +86,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 
 -- plugin manager
 require("config.lazy")
