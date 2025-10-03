@@ -12,7 +12,7 @@ return {
                         conditionals = "NONE",
                         constants = "NONE",
                         functions = "NONE",
-                        keywords = "NONE",
+                        keywords = "bold",
                         numbers = "NONE",
                         operators = "NONE",
                         strings = "NONE",
@@ -20,7 +20,7 @@ return {
                     }
                 }
             })
-            vim.cmd([[colorscheme carbonfox]])
+            vim.cmd([[colorscheme nightfox]])
         end,
     }
 }

@@ -1,47 +1,24 @@
 return {
-    {
-        'echasnovski/mini.pairs',
-        version = false,
-        lazy = true,
-        event = "VeryLazy",
-        opts = {}
-    },
-    {
-        'echasnovski/mini.move',
-        version = false,
-        lazy = true,
-        event = "VeryLazy",
-        opts = {}
-    },
-    {
-        'echasnovski/mini.cursorword',
-        version = false,
-        lazy = true,
-        event = "VeryLazy",
-        opts = {
-            delay = 1
-        }
-    },
-    {
-        "sphamba/smear-cursor.nvim",
-        lazy = true,
-        event = "VeryLazy",
-        opts = {
-            legacy_computing_symbols_support = true,
-        },
-    },
-    {
-        'echasnovski/mini.indentscope',
-        version = false,
-        event = "VeryLazy",
-        opts = {}
-    },
-    {
-        'NMAC427/guess-indent.nvim',
-        opts = {}
-    },
-    {
-        'windwp/nvim-ts-autotag',
-        opts = {}
-    }
+	{
+		"echasnovski/mini.pairs",
+		version = false,
+		opts = {},
+	},
+	{
+		"echasnovski/mini.move",
+		version = false,
+		opts = {
+			-- Module mappings
+			mappings = {
+				left = "<C-M-h>",
+				right = "<C-M-l>",
+				down = "<C-M-j>",
+				up = "<C-M-k>",
+				line_left = "<C-M-h>",
+				line_right = "<C-M-l>",
+				line_down = "<C-M-j>",
+				line_up = "<C-M-k>",
+			},
+		},
+	},
 }
