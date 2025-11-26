@@ -1,12 +1,16 @@
 return {
     {
         "echasnovski/mini.files",
+        lazy = false,
         opts = {
             windows = {
                 preview = true,
                 width_focus = 30,
-                width_preview = 60,
+                width_preview = 70,
             },
+            options = {
+                use_as_default_explorer = true,
+            }
         },
         keys = {
             {
@@ -24,8 +28,5 @@ return {
                 desc = "Open mini.files (cwd)",
             },
         },
-        config = function()
-            require("mini.files")
-        end
     }
 }

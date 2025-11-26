@@ -1,11 +1,53 @@
 return {
     { -- Highlight, edit, and navigate code
         'nvim-treesitter/nvim-treesitter',
+        version = false, -- last release is way too old and doesn't work on Windows
         build = ':TSUpdate',
         main = 'nvim-treesitter.configs', -- Sets main module to use for opts
         -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
         opts = {
-            ensure_installed = { 'bash', 'c', 'css', 'diff', 'go', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+            ensure_installed = { 
+                'bash', 
+                'c',
+                'css',
+                'csv',
+                'diff',
+                'dockerfile',
+                'git_config',
+                'gitcommit',
+                'git_rebase',
+                'gitignore',
+                'gitattributes',
+                'go',
+                'gomod',
+                'gowork',
+                'gosum',
+                'graphql',
+                'html',
+                'java',
+                'javadoc',
+                'javascript',
+                'jq',
+                'json',
+                'lua',
+                'luadoc',
+                'make',
+                'markdown',
+                'markdown_inline',
+                'nix',
+                'python',
+                'query',
+                'solidity',
+                'sql',
+                'tmux',
+                'tsx',
+                'typescript',
+                'typst',
+                'vim',
+                'vimdoc',
+                'xml',
+                'yaml'
+            },
             -- Autoinstall languages that are not installed
             auto_install = true,
             highlight = {
@@ -16,16 +58,6 @@ return {
                 additional_vim_regex_highlighting = { 'ruby' },
             },
             indent = { enable = true, disable = { 'ruby' } },
-
-            incremental_selection = {
-                enable = true,
-                keymaps = {
-                    init_selection = "<C-space>",
-                    node_incremental = "<C-space>",
-                    scope_incremental = false,
-                    node_decremental = "<bs>",
-                }
-            }
         },
     }
 }
