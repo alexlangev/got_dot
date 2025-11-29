@@ -1,7 +1,7 @@
 return {
     {
         -- move text around with vim keys
-        'nvim-mini/mini.move',
+        "nvim-mini/mini.move",
         version = false,
         opts = {},
     },
@@ -26,12 +26,24 @@ return {
         "NMAC427/guess-indent.nvim",
         opts = {},
     },
-    -- Can't make this one work...
-    -- {
-    --     -- TODO
-    --     "folke/todo-comments.nvim",
-    --     event  = "Lazy",
-    --     dependencies = { "nvim-lua/plenary.nvim" },
-    --     opts = {}
-    -- }
+    {
+        -- TODO:
+        -- BUG:
+        -- FIX:
+        -- TEST:
+        -- PERFORMANCE:
+        -- NOTE:
+        -- WARNING:
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        opts = {
+            signs = false,
+        },
+    },
+    {
+        -- handles autoclose html tags
+        "windwp/nvim-ts-autotag",
+        opts = {
+        },
+    },
 }

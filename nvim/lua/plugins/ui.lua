@@ -1,53 +1,62 @@
 return {
-    {   
-        'nvim-mini/mini.cursorword',
+    {
+        "nvim-mini/mini.cursorword",
         version = false,
         opts = {},
     },
     {
-        'nvim-mini/mini.indentscope',
+        "nvim-mini/mini.indentscope",
         version = false,
         opts = {
-            symbol = '│',
+            symbol = "│",
             delay = 1,
         },
         config = function(_, opts)
-            require('mini.indentscope').setup(vim.tbl_deep_extend('force', opts, {
-                draw = { animation = function() return 0 end }
+            require("mini.indentscope").setup(vim.tbl_deep_extend("force", opts, {
+                draw = {
+                    animation = function()
+                        return 0
+                    end,
+                },
             }))
         end,
     },
     {
-        'nvim-mini/mini.starter',
+        "nvim-mini/mini.starter",
         version = false,
         opts = function()
-            local starter = require('mini.starter')
+            local starter = require("mini.starter")
             return {
                 header = [[
-▄▄▄▄  ▗▞▀▚▖ ▄▄▄  ▗▖  ▗▖▄ ▄▄▄▄  
-█   █ ▐▛▀▀▘█   █ ▐▌  ▐▌▄ █ █ █ 
-█   █ ▝▚▄▄▖▀▄▄▄▀ ▐▌  ▐▌█ █   █ 
+▄▄▄▄  ▗▞▀▚▖ ▄▄▄  ▗▖  ▗▖▄ ▄▄▄▄
+█   █ ▐▛▀▀▘█   █ ▐▌  ▐▌▄ █ █ █
+█   █ ▝▚▄▄▖▀▄▄▄▀ ▐▌  ▐▌█ █   █
                   ▝▚▞▘          ]],
                 footer = "",
                 silent = true,
                 items = {
                     starter.sections.recent_files(5, false, false),
-                    { 
-                        action = 'Lazy', 
-                        name = 'Lazy', 
-                        section = 'Plugins' 
+                    {
+                        action = "Lazy",
+                        name = "Lazy",
+                        section = "Plugins",
                     },
                     {
-                        action = 'enew',
-                        name = 'New File',
-                        section = 'Actions'
+                        action = "Mason",
+                        name = "Mason",
+                        section = "Plugins",
                     },
                     {
-                        action = 'quit',
-                        name = 'Quit',
-                        section = 'Actions'
+                        action = "enew",
+                        name = "New File",
+                        section = "Actions",
                     },
-                }
+                    {
+                        action = "quit",
+                        name = "Quit",
+                        section = "Actions",
+                    },
+                },
             }
         end,
     },
@@ -85,25 +94,25 @@ return {
         end,
     },
     {
-        'MeanderingProgrammer/render-markdown.nvim',
+        "MeanderingProgrammer/render-markdown.nvim",
         -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' },            -- if you use the mini.nvim suite
         dependencies = {
-            'nvim-treesitter/nvim-treesitter',
-            'nvim-mini/mini.icons',
-        },        -- if you use standalone mini plugins
+            "nvim-treesitter/nvim-treesitter",
+            "nvim-mini/mini.icons",
+        }, -- if you use standalone mini plugins
         -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
         ---@module 'render-markdown'
         ---@type render.md.UserConfig
         opts = {
             -- Only render markdown in normal mode
-            render_modes = {'n'},
+            render_modes = { "n" },
             heading = {
                 sign = false,
             },
             code = {
                 sign = false,
-                position = 'right',
-                width = 'block',
+                position = "right",
+                width = "block",
             },
         },
     },
