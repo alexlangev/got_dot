@@ -1,26 +1,51 @@
 return {
-    { 
-        "EdenEast/nightfox.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require('nightfox').setup({
-                options = {
-                    transparent = true,
-                    styles = {
-                        comments = "italic",
-                        conditionals = "NONE",
-                        constants = "NONE",
-                        functions = "NONE",
-                        keywords = "NONE",
-                        numbers = "NONE",
-                        operators = "NONE",
-                        strings = "NONE",
-                        types = "NONE",
-                    }
-                }
-            })
-            vim.cmd([[colorscheme carbonfox]])
-        end,
-    }
+	-- {
+	-- 	"rose-pine/neovim",
+	-- 	name = "rose-pine",
+	-- 	config = function()
+	-- 		vim.cmd("colorscheme rose-pine")
+	-- 	end,
+	-- },
+	-- {
+	-- 	"olivercederborg/poimandres.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("poimandres").setup({
+	-- 			-- bold_vert_split = true, -- use bold vertical separators
+	-- 			-- dim_nc_background = true, -- dim 'non-current' window backgrounds
+	-- 			disable_background = true, -- disable background
+	-- 			disable_float_background = false, -- disable background for floats
+	-- 			-- disable_italics = false, -- disable italics
+	-- 		})
+	-- 	end,
+	-- 	-- optionally set the colorscheme within lazy config
+	-- 	init = function()
+	-- 		vim.cmd("colorscheme poimandres")
+	-- 	end,
+	-- },
+	-- {
+	-- 	"EdenEast/nightfox.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("nightfox").setup({
+	-- 			options = {
+	-- 				transparent = true,
+	-- 				styles = {
+	-- 					comments = "italic",
+	-- 					conditionals = "NONE",
+	-- 					constants = "NONE",
+	-- 					functions = "NONE",
+	-- 					keywords = "NONE",
+	-- 					numbers = "NONE",
+	-- 					operators = "NONE",
+	-- 					strings = "NONE",
+	-- 					types = "NONE",
+	-- 				},
+	-- 			},
+	-- 		})
+	-- 		vim.cmd([[colorscheme carbonfox]])
+	-- 	end,
+	-- },
 }

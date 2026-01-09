@@ -1,7 +1,7 @@
 -- set <space> as the leader key
 -- always set this first
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- turn off swapfile
 vim.opt.swapfile = false
@@ -14,14 +14,14 @@ vim.o.number = true
 vim.o.relativenumber = true
 
 -- mouse support for resizing splits
-vim.o.mouse = 'a'
+vim.o.mouse = "a"
 
 -- mode is shown is status bar anyways
 vim.o.showmode = false
 
 -- Sync clipboard between OS and Neovim
 vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
+	vim.o.clipboard = "unnamedplus"
 end)
 
 -- default tabs (style when starting new file)
@@ -38,7 +38,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 -- Not sure, it this the left gutter?
-vim.o.signcolumn = 'yes'
+vim.o.signcolumn = "yes"
 
 -- Decrease update time
 vim.o.updatetime = 250
@@ -55,7 +55,7 @@ vim.o.splitbelow = true
 -- vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
-vim.o.inccommand = 'split'
+vim.o.inccommand = "split"
 
 -- Show which line your cursor is on!
 vim.o.cursorline = true
@@ -69,34 +69,34 @@ vim.o.scrolloff = 8
 vim.o.confirm = true
 
 -- Clear highlights on search with <Esc> in normal mode
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Diagnostics keybind... ?
 -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Visual feedback on yanking
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.hl.on_yank()
-  end,
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight when yanking (copying) text",
+	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	callback = function()
+		vim.hl.on_yank()
+	end,
 })
 
 -- highlight group colors?
-vim.api.nvim_create_autocmd('ColorScheme', {
-    callback = function()
-        vim.api.nvim_set_hl(0, 'MiniCursorword', {
-            underline = true
-        })
-        vim.api.nvim_set_hl(0, 'MiniCursorwordCurrent', {
-            bg = 'NONE',
-            fg = 'NONE',
-            bold = false,
-            italic = false,
-            underline = false,
-        })
-    end
+vim.api.nvim_create_autocmd("ColorScheme", {
+	callback = function()
+		vim.api.nvim_set_hl(0, "MiniCursorword", {
+			underline = true,
+		})
+		vim.api.nvim_set_hl(0, "MiniCursorwordCurrent", {
+			bg = "NONE",
+			fg = "NONE",
+			bold = false,
+			italic = false,
+			underline = true,
+		})
+	end,
 })
 
 -- plugin manager
